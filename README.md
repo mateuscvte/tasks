@@ -1,5 +1,5 @@
-# Tasks - Gerenciador de Tasks
+# Tasks - Gerenciador de Tarefas
 
-- Gerenciador de tasks feito com Angular, Nodejs e Firebase.
+- Gerenciador de tarefas feito com Angular, Nodejs e Firebase.
 
 
