@@ -12,7 +12,8 @@ export const environment = {
     storageBucket: "tasks-b48c9.appspot.com",
     messagingSenderId: "344187537803",
     appId: "1:344187537803:web:bdec5fa8319ff90a91078e"
-  }
+  },
+  API: 'https://us-central1-tasks-b48c9.cloudfunctions.net/api'
 };
 
 /*

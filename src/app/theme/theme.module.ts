@@ -12,7 +12,7 @@ import {MatCardModule} from "@angular/material/card";
     LoginModule,
     HomeModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class ThemeModule { }

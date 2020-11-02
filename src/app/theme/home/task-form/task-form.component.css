@@ -1,0 +1,10 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contain button {
+  width: 45%;
+  margin-left: 5px;
+}

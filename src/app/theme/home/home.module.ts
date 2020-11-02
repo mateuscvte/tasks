@@ -8,9 +8,15 @@ import {MatTableModule} from '@angular/material/table';
 import {CdkTableModule} from "@angular/cdk/table";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatCardModule} from '@angular/material/card';
+import {TaskService} from "../../service/task.service";
+import { TaskFormComponent } from './task-form/task-form.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, TaskFormComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -19,7 +25,12 @@ import {MatCardModule} from '@angular/material/card';
     MatTableModule,
     CdkTableModule,
     MatTooltipModule,
-    MatCardModule
-  ]
+    MatCardModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
+  providers: [TaskService]
 })
 export class HomeModule { }

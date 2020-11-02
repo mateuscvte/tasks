@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import {ThemeModule} from "./theme/theme.module";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {ThemeModule} from "./theme/theme.module";
     AppRoutingModule,
     ThemeModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],

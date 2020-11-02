@@ -7,7 +7,7 @@
 </mat-toolbar>
 
 
-<table mat-table [dataSource]="dataSource">
+<table mat-table [dataSource]="tasks">
 
   <ng-container matColumnDef="title">
     <th mat-header-cell *matHeaderCellDef> Titulo</th>
@@ -22,10 +22,10 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef>Ações</th>
     <td mat-cell *matCellDef="let row">
-      <button mat-icon-button matTooltip="Editar" [matTooltipPosition]="'above'">
+      <button mat-icon-button matTooltip="Editar" [matTooltipPosition]="'above'" (click)="openEditTask(row)">
         <mat-icon color="primary">edit</mat-icon>
       </button>
-      <button mat-icon-button matTooltip="Excluir" [matTooltipPosition]="'above'">
+      <button mat-icon-button matTooltip="Excluir" [matTooltipPosition]="'above'" (click)="openDeleteTask(row)">
         <mat-icon color="primary">delete</mat-icon>
       </button>
     </td>
@@ -36,7 +36,7 @@
 </table>
 
 <div class="task-button">
-  <button mat-fab color="primary">
+  <button mat-fab color="primary" (click)="openCreateNewTask()">
     <mat-icon>add</mat-icon>
   </button>
 </div>

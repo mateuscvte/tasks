@@ -1,0 +1,39 @@
+<div *ngIf="dialogIs === 'add'" class="contain">
+  <h2>Adicionar tarefa</h2>
+  <form [formGroup]="taskForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Título da tarefa</mat-label>
+      <input matInput formControlName="title" placeholder="Título para a tarefa">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Status da tarefa</mat-label>
+      <input matInput formControlName="status" placeholder="Status para a tarefa">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="createNewTask()">Criar</button>
+  <button mat-raised-button (click)="close()">Fechar</button>
+</div>
+
+<div *ngIf="dialogIs === 'edit'" class="contain">
+  <h2>Editar tarefa</h2>
+  <form [formGroup]="taskForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Título da tarefa</mat-label>
+      <input matInput formControlName="title" placeholder="Título para a tarefa">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Status da tarefa</mat-label>
+      <input matInput formControlName="status" placeholder="Status para a tarefa">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="onUpdateTask()">Salvar</button>
+  <button mat-raised-button (click)="close()">Fechar</button>
+</div>
+
+
+
+<div *ngIf="dialogIs === 'delete'" class="contain">
+  <h2>Deseja deletar?</h2>
+  <button mat-raised-button color="primary" (click)="confirmDeleteTask()">Sim</button>
+  <button mat-raised-button (click)="close()">Fechar</button>
+</div>
